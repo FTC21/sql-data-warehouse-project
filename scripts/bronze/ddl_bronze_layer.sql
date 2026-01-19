@@ -1,3 +1,10 @@
+/* ============================================================================
+   SCRIPT : DDL – Create Bronze Tables
+   PURPOSE: Define and initialize Bronze layer tables for CRM and ERP sources.
+   SCOPE  : Tables store raw source data and are designed for full-load ingestion
+            prior to downstream Silver and Gold transformations.
+   ============================================================================ */
+
 CREATE OR ALTER PROCEDURE bronze.load_bronze AS
 BEGIN
     DECLARE @start_time DATETIME, @end_time DATETIME, @begin_procedure DATETIME, @end_procedure DATETIME;
