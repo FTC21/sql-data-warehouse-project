@@ -1,9 +1,16 @@
 /* ============================================================================
-   SCRIPT : DDL – Create Bronze Tables
-   PURPOSE: Define and initialize Bronze layer tables for CRM and ERP sources.
-   SCOPE  : Tables store raw source data and are designed for full-load ingestion
-            prior to downstream Silver and Gold transformations.
+   SCRIPT      : DDL – Create Bronze Tables
+   PURPOSE     : Define Bronze layer tables for CRM and ERP source systems.
+   DESCRIPTION : Tables are designed to store raw, untransformed data and support
+                 full-load ingestion workflows using CSV source files.
+
+   PARAMETERS  : None.
+                 This script does not accept input parameters.
+
+   USAGE       : Execute once to initialize Bronze tables before running
+                 data load (DML) or ingestion procedures.
    ============================================================================ */
+
 
 CREATE OR ALTER PROCEDURE bronze.load_bronze AS
 BEGIN
